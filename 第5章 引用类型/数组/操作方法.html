@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用类型之数组</title>
+</head>
+<body>
+<script>
+    //数组的方法
+    //concat
+    let arr1 = Array('apple',"bnana","math","chinese","chemistry");
+    let arr2 = new Array("1");
+    let arrMerge = arr1.concat(arr2);
+    console.log(arrMerge);
+
+    //slice(start,end),其中范围是[start,end)
+    let arrSlice = arr1.slice(0,5);
+    console.log(arrSlice);
+    //slice参数中有负数的情况
+    let like = arr1.slice(-1,-2);
+    console.log(like);//[]
+
+
+    //splice用作删除
+    //splice(start,length)
+    let ret = arr1.splice(0,2);
+    console.log(arr1);
+    console.log("splice return " + ret );
+    //splice用作插入,splice(start,0,items...)
+    ret = arr1.splice(0,0,"apple","computer");
+    console.log("splice return " + ret);
+    console.log(arr1);
+    //splice用作替换，splice(start,delete,items...),其中插入的项数不必和删除的项数相同
+    //splice始终返回一个数组，其中包含被删除的项数，如果没有被删除的项数，那么是个空数组
+
+
+</script>
+</body>
+</html>
