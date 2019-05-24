@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转换方法</title>
+</head>
+<body>
+    <script>
+        //toLocaleString(),toString(),valueOf()
+        let colors = ["red","green","blue"];
+        console.log("toLocalString():" + colors.toLocaleString());
+        console.log("toString():" + colors.toString());
+        console.log("valueOf:" + colors.valueOf());
+        console.log(typeof colors.valueOf());
+
+
+        //call toString or toLocaleString
+        let person1 = {
+            toString:function () {
+                return "viola";
+            },
+            toLocaleString:function () {
+                return "VIOLA";
+            }
+        };
+
+        let person2 = {
+            toString:function () {
+                return "jack";
+            },
+            toLocaleString:function () {
+                return "JACK";
+            }
+        };
+
+        var people = [person1,person2];
+        alert(people);
+        console.log(people.toString());
+        console.log(people.toLocaleString());
+
+
+    </script>
+</body>
+</html>
