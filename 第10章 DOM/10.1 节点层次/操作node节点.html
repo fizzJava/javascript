@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作node节点</title>
+</head>
+<body id="parent">
+    <div id="first-child" style="background-color: red;height: 100px"></div>
+    <div id="second-child" style="background-color: aqua;height: 100px"></div>
+
+    <ul id="myList">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+
+    </ul>
+</body>
+
+    <script>
+        //改变node节点位置
+        let parentNode = document.getElementById("parent");
+        let firstChild = document.getElementById("first-child");
+        let returnedNode = parentNode.appendChild(firstChild);
+        //appendChild insertBefore 插入节点
+        //replaceChild(newnode,replaced),newnode在文档树中的关系全都从the replaced中
+        //获得，被替换节点从文档树中移除，但是还在文档中,只不过在文档中没有了自己的位置，
+        // 被移除的节点成为该方法的返回值
+        //removeChild(node),与replaceChild()一样，虽然节点还在文档中，但是没有了自己的位置
+        //上面的方法并不是每个节点都有的。
+
+        //下面的两个方法是每个节点都有的
+        //1.cloneNode(boolean); true为深复制，false浅复制。深复制包括复制节点及节点子树,
+        //浅复制只复制节点本身。返回的节点副本，是个'孤儿'，虽然存在于文档中，但是并没有为其指定父节点
+        //除非通过appendChild() 、insertBefore()、replaceChild()将其添加到文档树中。
+
+        let myList = document.getElementById("myList");
+        let deepList = myList.cloneNode(true);
+        console.log("深copy:" + deepList.childNodes.length);
+        console.log(deepList.childNodes);
+        let shallowList = myList.cloneNode(false);
+        console.log("浅copy:" + shallowList.childNodes.length)
+
+        //2.normalize()是处理文档树中的文本节点，知道就行了。。。我也不想搞了。
+
+
+
+
+
+
+
+
+
+     </script>
+</html>
