@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档信息</title>
+</head>
+<body>
+    <script>
+        //取得文档标题
+        let title = document.title;
+        console.log(title);
+
+        //关于请求有关的，URL、domain、referrer
+        console.log(document.URL);
+        console.log(document.domain);
+        console.log(document.referrer);
+
+        //浏览器对domain属性的限制，如果当前域是www.wangguigang.com document.domain = "wangguigang.com"
+        //这样写没问题，但是接着再写document.domain = "www.wangguigang.com",就会出问题了。
+
+
+    </script>
+</body>
+</html>

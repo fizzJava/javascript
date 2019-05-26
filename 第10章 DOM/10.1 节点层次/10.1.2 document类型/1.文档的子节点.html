@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document类型</title>
+</head>
+<body>
+    <script>
+        if(document instanceof HTMLDocument)
+            console.log("document 是HTMLDocument的一个实例");
+
+        console.log(document.nodeType);
+        console.log(document.nodeName);
+        console.log(document.nodeValue);
+        console.log(document.parentNode);
+        console.log(document.ownerDocument);
+        console.log(document.documentElement);//html
+        console.log(document.body);//body
+        console.log(document.doctype);//这个属性用处有限
+        //用不着在文档对象上调用appendChild()、replaceChild()、insertBefore()、
+        //因为文档类型通常是只读的。
+
+
+
+
+    </script>
+</body>
+</html>

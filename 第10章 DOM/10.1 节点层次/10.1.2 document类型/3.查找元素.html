@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找元素</title>
+</head>
+<body>
+    <form>
+        <input name="fruit" id="first" selfish = "sell fish">
+        <input name="fruit" id="second">
+        <input name="vegetable" id="third">
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>which color do you like?</legend>
+            <ul>
+                <li>
+
+                        <input type="radio" name="color" id="colorRed" value="red">
+                        <label for="colorRed">red</label>
+
+
+                        <input type="radio" name="color" id="colorGreen" value="green">
+                        <label for="colorGreen">green</label>
+
+
+                        <input type="radio" name="color" id="colorBlue" value="Blue">
+                        <label for="colorBlue">blue</label>
+
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+</body>
+<script>
+    //1.getElementById();
+    //2.getElementByTagName();返回的是一个HTMLCollection对象,类似nodeList.
+    let inputList = document.getElementsByTagName("input");
+    console.log(inputList.length);
+    console.log(inputList.namedItem("fruit"));//namedItem()，返回的并不是一个集合，而是单个item
+    console.log(inputList["selfish"]);//在提供索引访问项的基础上，此处返回undefined,因为我不知道什么是索引访问项
+
+
+
+    //只有HTMLDocument类型才有的方法
+    //getElementByName(),通常是选中一个表单中的单选按钮，因为单选按钮的name都是相同的
+    let radio = document.getElementsByName("color");
+    console.log(radio);
+
+
+
+
+</script>
+</html>

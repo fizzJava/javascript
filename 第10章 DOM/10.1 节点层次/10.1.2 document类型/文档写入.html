@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档写入</title>
+</head>
+<body>
+<p>this is the page document content</p>
+    <script>
+        //么有重写整个页面的内容
+    //    document.write("<strong>this content will rewrite the html content loaded. </strong>");
+
+        //会重写整个页面
+    window.onload = function () {
+        document.write("<strong>hello world！</strong>")
+    }
+    //使用document.write()加载文件
+        document.write("<script type='text/javascript' src='file.js'>" + "<\/script>");
+    </script>
+</body>
+</html>
