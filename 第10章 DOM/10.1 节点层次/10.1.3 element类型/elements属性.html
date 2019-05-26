@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elements属性</title>
+</head>
+<body>
+    <div id="head" style="height: 100px;width: 200px; background-color: aqua">
+
+    </div>
+    <script type="text/javascript">
+        let headDom = document.getElementById("head");
+        let map = headDom.attributes.getNamedItem("id");
+        console.log(map);
+        headDom.attributes.removeNamedItem("id");
+        map = headDom.attributes.getNamedItem("id");
+        console.log(name);
+        console.log(headDom.attributes.getNamedItem("style"));//相当于headDom.style
+        headDom.setNamedItem();//很少用，需要传入一个特性节点
+
+
+    </script>
+</body>
+</html>

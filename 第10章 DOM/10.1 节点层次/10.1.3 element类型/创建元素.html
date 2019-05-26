@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建元素</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //document.creatElement()可以创建一个新元素，表签名再html文档中不区分大小写，在
+        //xml和xhtmL当中则不区分大小写。创建的元素并不存再文档树中，需要手动添加。
+        var div =  document.createElement("div");
+        div.id = "my-div";
+        div.style.background = "blue";
+        div.style.height = "100px";
+        //var divS = document.createElement("<div id=\"hello\" style=\"background-color:red;height: 100px\"></div>");
+        document.body.appendChild(div);
+        //document.body.insertBefore(divS,div);
+    </script>
+
+</body>
+</html>

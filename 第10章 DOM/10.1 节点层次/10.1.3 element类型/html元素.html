@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html元素</title>
+</head>
+<body>
+    <p id = "your-father" title="我是你爹" style="height: 90px">去你妈的hello world</p>
+    <script type="text/javascript">
+        //自定义特性要加data-前缀已做区分
+        //通过对象属性访问attribute
+        let pDom = document.getElementById("your-father");
+        pDom.className;
+        console.log(pDom.id);
+        pDom.title;
+        //通过方法访问这些特性 Attribute : getAttribute() setAttribute() removeAttribute()
+        //特性的名称不区分大小写。一般情况下，要获取自定义特性使用getAttribute(),其他的还是用对象属性访问比较好
+        //setAttribute(attributeName,attributeValue);
+        //removeAttribute(attributeName);
+        console.log(pDom.style);
+        console.log(pDom.getAttribute("style"));
+
+    </script>
+</body>
+</html>
